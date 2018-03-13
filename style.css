@@ -70,6 +70,7 @@ header .highlight, header .current a{
 	font-weight:bold;
 }
 
+/*Efect la scris */
 header a:hover{
 	color:#cccccc;
 	font-weight:bold;
@@ -100,10 +101,6 @@ header a:hover{
 	padding:25px;
 	color:#ffffff;
 	background:#35424a;
-}
-
-#newsletter h1{
-	float:left;
 }
 
 #newsletter form{
