@@ -10,7 +10,7 @@ body{
 }
 /*Global */
 .container{
-	width:80%;
+	width:85%;
 	margin:auto;
 	overflow:hidden;
 }
@@ -28,18 +28,27 @@ header ul{
 	padding-right:20px;
 	color:#ffffff;
 }
+
+.dark{
+	padding:15px;
+	background:#35424a;
+	color:#ffffff;
+	margin-top:10px;
+	margin-bottom:10px;
+}
 /* Header */
 header{
 	background:#35424a;
 	color:#ffffff;
-	padding-top:30px;
-	min-height:70px;
+	padding:30px;
+	min-height:100%;
 	border-bottom:#e8491d 3px solid;
+	
 }
 
 header a{
 	color:#ffffff;
-	text-decoration:nome;
+	text-decoration:none;
 	font-size:100%;
 }
 
@@ -53,9 +62,11 @@ header li{
 header #branding{
 	float:left;
 	
+	
 }
 header #branding h1{
 	margin:0;
+	
 }
 
 header nav{
@@ -66,7 +77,7 @@ header nav{
 /* Colorez AuctionX si butonul HOME in portocaliu */
 header .highlight, header .current a{
 	color:#e8491d;
-	
+		
 	font-weight:bold;
 }
 /*Efect la scris */
@@ -79,7 +90,7 @@ header a:hover{
 
 #showcase{
 	background:url('../img/12.jpg');
-	opacity:0.8;
+	opacity:0.7;
 	filter:alpha(opacity=100);
 	background-size: cover;
 	background-position:center;
@@ -108,30 +119,43 @@ header a:hover{
 #newsletter2{
 	border-bottom:#e8491d 3px solid;
 	border-top:#e8491d 3px solid;
-	padding:25px;
+	padding:12px;
 	color:#ffffff;
 	background:#35424a;
 }
 
 
 #newsletter2 form{
-	float:center;
+	float:Right;
 	font-size:20px;
-	margin-top:1%;
+	margin-top:20px;
 }
 
 #newsletter{
 	border-bottom:#e8491d 3px solid;
 	border-top:#e8491d 3px solid;
-	padding:40px;
+	padding:25px;
 	color:#ffffff;
 	background:#35424a;
 }
 
+#newsletter3 form{
+	float:Right;
+	font-size:5px;
+	margin-top:5px;
+}
+
+#newsletter{
+	border-bottom:#e8491d 3px solid;
+	border-top:#e8491d 3px solid;
+	padding:25px;
+	color:#ffffff;
+	background:#35424a;
+}
 
 #newsletter form{
 	float:right;
-	margin-top:1%;
+	margin-top:30px;
 }
 
 #newsletter input[type="search"]{
@@ -140,41 +164,126 @@ header a:hover{
 	width:250px;
 }
 
+#post
+{	
+	background:#f1f1f1;
+	font-family: 'intro';
+	margin:0;
+	padding:0;
+}
+
+.post{
+	float:left;
+	width:1189px;
+	height:700px;
+	position:relative;
+	
+}
+
+.post img {
+	display:block;
+	width:1189px;
+	height:700px;
+	cursor: pointer;
+	
+	
+}
+
+.post:hover .post-s{
+	
+	width:1189px;
+}
+
+.post-s{ 
+	
+	width:0px;
+	height:700px;
+	background:rgba(45, 44, 44, 0.71);
+	position:absolute;
+	top:0;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;
+	transition:0.7s ease;
+}
+
+.post-s h2{
+		
+	color:white;
+	font-size:50px;
+	border:6px solid white;
+	padding:10px 30px;
+	
+}
+
 /* boxes */
 #boxes{
-	margin-top:20px;
+	margin-top:30px;
+	text-decoration:none;
 }
 
 #boxes .box{
 	float:left;
 	text-align:center;
+	text-decoration:none;
 	width:30%;
 	padding:20px;
 }
 
-#boxes .box img {
+#boxes .box img 
+{
+	
 	width:220px;
+	text-decoration:none;
+}
+
+#main
+{
+	background:url('../img/about.jpg');
+	opacity:1;
+	filter:alpha(opacity=100);
+	background-size: cover;
+background-position:center;
+}
+
+
+aside#sidebar{
+	float:center;
+	width:60%;
+	font-size:20px;
+	margin-top:75px;
+	padding-left:400px;
 }
 
 
 footer{
+	
 	padding:20px;
 	margin-top:20px;
 	color:#ffffff;
 	background-color:#e8491d;
+	font-size:15px;
 	text-align:center;
 }
 
-@media(max-width:768px){
+@media(max-width:769px){
 	header #branding,
 	header nav,
 	header nav li,
 	newsletter h1,
 	#newsletter form,
-	#boxes .box{
+	#boxes .box,
+	article#main-col,
+	aside#sidebar {
 		float:none;
 		text-align:center;
 		width:100%;
+	}
+	#post .post-s
+	{
+		
+		
 	}
 	header{
 	padding-bottom:20px;
