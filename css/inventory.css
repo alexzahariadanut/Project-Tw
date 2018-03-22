@@ -1,0 +1,103 @@
+		/*  Sidebar-pozitie,inaltime,latime,culoare background */
+#sidebar{
+	width:20%;
+	height:100%;
+	background:#35424a;
+	position:fixed;
+	text-align:left;
+}
+
+/*  Elementele listei */
+#sidebar ul li{
+	display:block;
+	text-align:left;
+	font-family: Arial, Helvetica, sans-serif;
+	list-style:none;
+	padding:13% 5%;
+	border-bottom:1px solid #ffffff;
+	color:white;
+
+}
+/* Text fara decoratii */
+#sidebar ul li a{
+	text-decoration:none;
+	text-align:center;
+	color:white;
+}
+/* Linukuri nevizitate */
+#sidebar ul li a:link{
+	color:white;
+	
+}
+/*Linukuri vizitate */
+#sidebar ul li a:visited{
+	color:#e8491d;
+}
+/* Animatie pentru hover */
+#sidebar ul li a:hover{
+	color:#cccccc;
+	font-weight:bold;
+}
+/* Linkuri active */
+#sidebar ul li a:active{
+	color:#e8491d;
+	font-weight:bold;
+}
+/* Menu Icons */
+#side-pics1{
+	width:9%;
+	height:9%;
+	float:left;
+}
+#side-pics2{
+	width:11%;
+	height:11%;
+	float:left;
+}
+#side-pics3{
+	width:10%;
+	height:10%;
+	float:left;
+}
+#side-pics4{
+	width:12%;
+	height:12%;
+	float:left;
+}
+		/*  Sfarsit Sidebar  */
+
+/* Formular de adaugat un obiect */
+#formular{
+	overflow:auto;
+	height:50%;
+	width:50%;
+	position:relative;
+	left:30%;
+	border:2px solid #35424a;
+	border-radius:15px;
+	padding-left:10%;
+}
+
+form {
+	display:table;
+}
+p{
+	display:table-row;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#e8491d;
+	padding:10%;
+}
+label{
+	display:table-cell;
+	padding:10px;
+}
+input{
+	display:table-cell;
+	padding:5px;
+}
+h1{
+	text-align:center;
+	color:#e8491d;
+}
+
+
