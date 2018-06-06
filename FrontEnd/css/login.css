@@ -8,7 +8,103 @@ body{
 	background-color:#35424a;
 	
 }
+.container{
+	width:85%;
+	margin:auto;
+	overflow:hidden;
+}
+.button_1{
+	height:38px;
+	background:#e8491d;
+	border:0;
+	padding-left:20px;
+	padding-right:20px;
+	color:#ffffff;
+}
+/* Header */
+header ul{
+	margin:0;
+	padding:0;
+}
 
+header{
+	background:#35424a;
+	color:#ffffff;
+	padding:30px;
+	min-height:100%;
+	border-bottom:#e8491d 3px solid;
+	
+}
+
+header a{
+	color:#ffffff;
+	text-decoration:none;
+	font-size:100%;
+}
+
+header li{
+	float:left;
+	display:inline;
+	padding:0 30px 0 30px ;
+	
+}
+/* Mut butoanele in coltul din dreapta sus */
+header #branding{
+	float:left;
+	
+	
+}
+header #branding h1{
+	margin:0;
+	
+}
+
+header nav{
+	float:right;
+	margin-top:10px;
+	
+}
+/* Colorez AuctionX si butonul HOME in portocaliu */
+header .highlight, header .current a{
+	color:#e8491d;
+		
+	font-weight:bold;
+}
+/*Efect la scris */
+header a:hover{
+	color:#cccccc;
+	font-weight:bold;
+}
+
+/* Showcase */
+#newsletter{
+	border-bottom:#e8491d 3px solid;
+	border-top:#e8491d 3px solid;
+	padding:25px;
+	color:#ffffff;
+	background:#35424a;
+}
+
+#newsletter form{
+	float:right;
+	margin-top:30px;
+}
+
+#newsletter input[type="search"]{
+	padding:10px;
+	height:38px;
+	width:250px;
+}
+footer{
+	
+	padding:20px;
+	margin-top:20px;
+	color:#ffffff;
+	background-color:#e8491d;
+	font-size:15px;
+	text-align:center;
+	margin-top:15%;
+}
 .login {
 	width:30%;
 	margin:30px auto;
