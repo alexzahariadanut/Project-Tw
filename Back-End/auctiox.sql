@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 06 Iun 2018 la 14:51
+-- Generation Time: 06 Iun 2018 la 15:03
 -- Versiune server: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -72,7 +72,8 @@ CREATE TABLE `products` (
   `product_name` varchar(30) NOT NULL,
   `product_description` varchar(255) NOT NULL,
   `seller_id` int(11) NOT NULL,
-  `category_id` int(11) NOT NULL
+  `category_id` int(11) NOT NULL,
+  `image` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
