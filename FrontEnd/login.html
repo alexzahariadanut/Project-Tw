@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include('login.php') ?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -10,12 +11,41 @@
 		<link rel="stylesheet" href="./css/login.css"> 
 	</head>
 	<body >
+	<header>
+			<div class="container">
+				<div id="branding">
+					<h1><a href="index.html"><span class="highlight">AuctioX</span> Web Page</a></h1>
+				</div>
+				<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="categories.html">Categories</a></li>
+					<li class="current"><a href="login.html">Login</a></li>
+					<li><a href="register.html">Register</a></li>
+					<li><a href="account.html">My Account</a></li>
+				
+				
+				</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<section id="newsletter">
+			<div class="container">
+				<form>
+					<input type="search" name="q" placeholder="What are you looking for?">
+					<button type="Submit" class="button_1">Search</button>
+				</form>
+			
+			</div>
+		</section>
 		<div class="login">
 			<img src="./img/avatar.png" class="avatar" alt="">
 				<h1 id="logintext">Login</h1>
-					<form>
-						<p>Email ID</p>
-						<input type="email" name="email" placeholder="Enter Email" required>
+					<form action="login.php" method="POST">
+						<p>Username</p>
+						<input type="text" name="username" placeholder="Enter Username" required>
 						<p>Password</p>
 						<input type="password" name="pass" placeholder="Enter Password" required>
 						<input type="Submit" name="submit" value="Login">
@@ -23,7 +53,9 @@
 						<a href="register.html">Do not have an account yet? </a>
 					</form>
 		</div>
-		
+		<footer>
+			<p>AuctioX Web Page,Copyright &copy; 2018</p>
+		</footer>
 		
 	</body>
 </html>
