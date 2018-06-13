@@ -8,6 +8,23 @@
 				$conn = OpenCon();
 			?>
 			
+<section id="showcase">
+			<div class="container">
+				<h1>AuctioX   Professional   Website</h1>
+				<p>Buyers come prepared to buy – they want the items being sold!</p>
+			</div>	
+		</section>
+		
+		<section id="newsletter">
+			<div class="container">
+			<form action="search.php" method="POST">
+				<input  type="text" name="search" placeholder="Search">
+				<button type="submit" name="submit-search" class="button_1">Search</button>
+			</form>
+
+				
+		</section>			
+		
 <h1>Search page</h1>
 <section id="main">
 			<div class="container">
