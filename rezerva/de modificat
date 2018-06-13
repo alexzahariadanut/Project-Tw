@@ -1,1 +1,2 @@
 trebuie modificat in baza de date la parola in varchar(33)
+adaugat in tabelul users coloana numita "privilegii" care sa aiba tipul de date int(11)
