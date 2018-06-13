@@ -3,20 +3,53 @@
 
 <student>
 <roll>1</roll>
-<name>ABC</name>
-<marks>88%</marks>
+<NumeObiect>Allview</NumeObiect>
+<Descriere>Aenean placerat. In vulputate urna eu arcu. Aliquam erat volutpat. Suspendisse potenti. Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere. Nullam </Descriere>
+<Seller_id>Petru12</Seller_id>
+<DataLicitatie>23.04.2017-09.12.2018</DataLicitatie>
 </student>
 
 <student>
 <roll>2</roll>
-<name>EFG</name>
-<marks>76%</marks>
+<NumeObiect>Iphone Se</NumeObiect>
+<Descriere>Telefon mai bun decat e orice pe piata</Descriere>
+<Seller_id>bogdan11</Seller_id>
+<DataLicitatie>20.07.2018-01.10.2018</DataLicitatie>
 </student>
 
 <student>
 <roll>3</roll>
-<name>XYZ</name>
-<marks>48%</marks>
+<NumeObiect>HTC</NumeObiect>
+<Descriere>Aenean placerat. In vulputate urna eu arcu. Aliquam erat volutpat. Suspendisse potenti. Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere. Nullam </Descriere>
+<Seller_id>Petru12</Seller_id>
+<DataLicitatie>20.01.2018-09.04.2018</DataLicitatie>
 </student>
 
+<student>
+<roll>4</roll>
+<NumeObiect>Huawei</NumeObiect>
+<Descriere> 64GB memorie,
+ liber de retea,
+ fara defecte de functionare,
+ incarcator original,
+ casti originale ( nefolosite )</Descriere>
+<Seller_id>alex</Seller_id>
+<DataLicitatie>02.04.2018-09.12.2018</DataLicitatie>
+</student>
+
+<student>
+<roll>5</roll>
+<NumeObiect>Allview</NumeObiect>
+<Descriere>Aenean placerat. In vulputate urna eu arcu. Aliquam erat volutpat. Suspendisse potenti. Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere. Nullam </Descriere>
+<Seller_id>MihaiLep</Seller_id>
+<DataLicitatie>23.04.2018-13.08.2018</DataLicitatie>
+</student>
+
+<student>
+<roll>6</roll>
+<NumeObiect>Iphone X</NumeObiect>
+<Descriere>Aenean placerat. In vulputate urna eu arcu. Aliquam erat volutpat. Suspendisse potenti. Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula.  </Descriere>
+<Seller_id>vlad.botez</Seller_id>
+<DataLicitatie>18.04.2018-13.05.2018</DataLicitatie>
+</student>
 </te>
