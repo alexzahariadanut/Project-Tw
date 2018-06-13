@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,15 +13,16 @@
 		<link rel="stylesheet" href="./css/style2.css"> 
 		<link rel="stylesheet" href="./css/inventory.css">
 	</head>
+		
 	<body>
 		<header>
 			<div class="container">
 				<div id="branding">
-					<h1><a href="index.php"><span class="highlight">AuctioX</span> Web Page</a></h1>
+					<h1><a href="index.html"><span class="highlight">AuctioX</span> Web Page</a></h1>
 				</div>
 				<nav>
 				<ul>
-					<li><a href="index.php">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About us</a></li>
 					<li><a href="categories.html">Categories</a></li>
 					<li><a href="login.html">Login</a></li>
@@ -39,51 +44,59 @@
 				</ul>
 			</div>
 			
-			
-			
+
 			<div id="formular">
 				
-				<form action="#" method="POST">
+				<form name="addItem" action="addItem.php" method="post">
 					<h1> Add item </h1>
+					
 					<p>
 						<label for="a">Name:</label>
-						<input id="a" type="text" />	
+						<input id="a" type="text"  name="name" required />	
 					</p>
 					<p>
 						<label for="b">Condition:</label>   
-						<input id="b" type="text" />
+						<input id="b" type="text" name="condition" required />
+						
 					</p>
 					<p>
 						<label for="c">End date: </label>   
-						<input  id="c" type="date" />
+						<input  id="c" type="datetime" name="date" required />
 					</p>
 					<p id="inputs">
 						<label for="d">End time:</label>    
-						<input id="d" type="time" />
+						<input id="d" type="datetime" name="endTime" required />
 					</p>
 					<p>
 						<label for="e">Category:</label>    
-						<input id="e" type="text" />
+						<select id="e" name="category" required >
+							<option value="mobile phones">Mobile Phones</option>
+							<option value="cars">Cars</option>
+							<option value="houses">Houses</option>
+							<option value="tv">TV</option>
+							<option value="PC">PC</option>
+							<option value="clothes">Clothes</option>
+						</select>
 					</p>
 					<p>
 						<label for="f"> Starting Price:</label>
-						<input  id="f" type="text"/> 
+						<input  id="f" type="text" name="startingPrice" required min="0" /> 
 					</p>
 					<p>
 						<label for="g"> Pictures: </label>
-						<input id="g" type="file" accept="image/*" multiple>
+						<input id="g" type="file" accept="image/*" multiple name="pictures" required />
 					</p>
 					<p>
 						<label for="h">Description: </label>
-						<textarea  id="h" rows="5" cols="40">
-					
+						<textarea  id="h" rows="5" cols="40" name="description">
+					      
 						</textarea>
 					</p>
-					<input  type ="submit" value="Add item" />
+					<input  type ="submit" value="Add item"  name="submit" />
 				</form>
 			</div>
 			
-			
+
 			
 			
 			
