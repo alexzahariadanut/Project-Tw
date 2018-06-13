@@ -6,8 +6,8 @@
 		<meta name="description" content="The MDN Web Docs Learning Area aims to provide complete beginners to the Web with all they need to know to get started with developing web sites and applications.">
 		<meta name="keywords" content="Web design">
 		<meta name="author" content="Alex Zaharia,Sima Paul,Rebegea Bogdan,Iulian Crisnuta">
-		<title>AuctioX | About us</title>
-		<link rel="stylesheet" href="./css/style.css"> 
+		<title>AuctioX | Welcome</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<header>
@@ -17,8 +17,8 @@
 				</div>
 				<nav>
 				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li class="current"><a href="about.html">About us</a></li>
+					<li class="current"<a href="index.php">Home</a></li>
+					<li><a href="about.html">About us</a></li>
 					<li><a href="categories.html">Categories</a></li>
 					<li><a href="login.html">Login</a></li>
 					<li><a href="register.html">Register</a></li>
@@ -30,19 +30,26 @@
 			</div>
 		</header>
 		
+	<section id="showcase">
+			<div class="container">
+				<h1>AuctioX   Professional   Website</h1>
+				<p>Buyers come prepared to buy – they want the items being sold!</p>
+			</div>	
+		</section>
+		
 		<section id="newsletter">
 			<div class="container">
-				<form>
-					<input type="search" name="q" placeholder="What are you looking for?">
-					<button type="Submit" class="button_1">Search</button>
-				</form>
-			
-			</div>
+			<form action="search.php" method="POST">
+				<input  type="text" name="search" placeholder="Search">
+				<button type="submit" name="submit-search" class="button_1">Search</button>
+			</form>
+
+				
 		</section>
 <title> Marksheet
 </title> 
 <body>
-<h1> Student details </h1>
+<h1> Items details </h1>
 <script>
 	if(window.XMLHttpRequest)
 		{	//firefox,opera,I7+
@@ -52,14 +59,14 @@
 		{	//
 			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-xmlhttp.open("GET","marks.xml",false);
+xmlhttp.open("GET","AtomFormat.xml",false);
 xmlhttp.send();
 xmlDoc=xmlhttp.responseXML;
 
-document.write("<table border='1' width='50%' style='font-size:35px;'>");
+document.write("<table border='1' width='100%' style='font-size:35px;'>");
 //Linia asta va scrie tabelul  in documentul html
 
-document.write("<tr><th>Roll</th><th>Name</th><th>Marks</th></th>");
+document.write("<tr><th>Roll</th><th>NumeObiect</th><th>Descriere</th><th>Seller_id</th><th>DataLicitatie</th></th>");
 var x=xmlDoc.getElementsByTagName("roll");
 //Linia asta va stoca un array de obiece in variabila x-fast
 
@@ -68,10 +75,15 @@ for(i=0;i<x.length;i++)
 	document.write("<tr><td>");
 	document.write(xmlDoc.getElementsByTagName("roll")[i].childNodes[0].nodeValue);
 	document.write("</td><td>");
-	document.write(xmlDoc.getElementsByTagName("name")[i].childNodes[0].nodeValue);
+	document.write(xmlDoc.getElementsByTagName("NumeObiect")[i].childNodes[0].nodeValue);
 	document.write("/</td><td>");
-	document.write(xmlDoc.getElementsByTagName("marks")[i].childNodes[0].nodeValue);
+	document.write(xmlDoc.getElementsByTagName("Descriere")[i].childNodes[0].nodeValue);
 	document.write("/</td><td>");
+	document.write(xmlDoc.getElementsByTagName("Seller_id")[i].childNodes[0].nodeValue);
+	document.write("/</td><td>");
+	document.write(xmlDoc.getElementsByTagName("DataLicitatie")[i].childNodes[0].nodeValue);
+	document.write("/</td><td>");
+	
 
 	
 }
