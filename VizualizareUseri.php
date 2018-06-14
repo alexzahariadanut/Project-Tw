@@ -38,13 +38,15 @@
 					
 				</ul>
 			</div>
-			<div >
+			<div id="utilizator">
 				<?php include'db.php';
 				$sql="select * from users";
 				$result=mysqli_query($conn,$sql);
 				while($row=mysqli_fetch_array($result))
-					echo $row['username'];
-			?>
+				{echo "Nume cont:".$row['username']."  Nume utilizator:".$row['first_name']."  Prenume utilizator:".$row['last_name'];
+				?>
+				<a> Sterge cont</a><br>
+				<?php }?>
 			</div>
 	</body>
 </html>
