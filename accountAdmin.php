@@ -21,7 +21,7 @@
 					<li><a href="indexAdmin.php">Home</a></li>
 					<li><a href="aboutAdmin.php">About us</a></li>
 					<li><a href="categoriesAdmin.php">Categories</a></li>
-					<li class="current"><a href="accountafterlogin.php">Hello admin <?php echo $_SESSION['utilizator']?></a></li>
+					<li class="current"><a href="accountAdmin.php">Hello admin <?php echo $_SESSION['utilizator']?></a></li>
 					<li><a href="logout.php">
 					Logout</a></li>
 				
