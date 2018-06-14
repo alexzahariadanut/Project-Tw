@@ -152,6 +152,13 @@
 					
 					
 					<input  type ="submit" value="Change Phone Number"  name="submit_phonenr" />
+					<?php   if($_SESSION["phone_changed"] == "true")  
+					{
+						echo "You changed your telephone number!";
+						
+					}
+					$_SESSION["phone_changed"] = "false";
+					?>
 					</form>
 					
 			</div>
@@ -159,7 +166,7 @@
 			<div id="formular">
 					<h1>Change your address</h1>
 					
-					<form name="changeAddress" action="changeAddress.php" method="post">
+					<form name="changeAddress" action="change_address.php" method="post">
 
 					<p>Your street is :  <?php include './BackEnd/db.php' ;
 											$user = $_SESSION['utilizator'];
@@ -198,32 +205,40 @@
 
 						<label for="a">Enter new street:</label>
 
-						<input id="a" type="text"  name="newStreet"  />	
+						<input id="a" type="text"  name="newStreet" required />	
 
 					</p>
 					<p>
 
 						<label for="b">Enter new country:</label>
 
-						<input id="b" type="text"  name="newCountry"  />	
+						<input id="b" type="text"  name="newCountry"  required />	
 
 					</p>
 					<p>
 
 						<label for="c">Enter new city:</label>
 
-						<input id="c" type="text"  name="newCity"  />	
+						<input id="c" type="text"  name="newCity"  required />	
 
 					</p>
 					<p>
 
 						<label for="d">Enter new zip code:</label>
 
-						<input id="d" type="text"  name="newZipCode"  />	
+						<input id="d" type="text"  name="newZipCode"  required/>	
 
 					</p>
 					
 					<input  type ="submit" value="Change Adress"  name="submit_address" />
+					
+					<?php   if($_SESSION["address_changed"] == "true")  
+					{
+						echo "You changed your address!";
+						
+					}
+					$_SESSION["address_changed"] = "false";
+					?>
 					</form>
 			
 			</div>
