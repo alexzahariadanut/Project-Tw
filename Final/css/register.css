@@ -1,0 +1,178 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:15px;
+	line-height:1.5;
+	
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	background: #35424a;
+	
+	
+}
+.container{
+	width:85%;
+	margin:auto;
+	overflow:hidden;
+}
+.button_1{
+	height:38px;
+	background:#e8491d;
+	border:0;
+	padding-left:20px;
+	padding-right:20px;
+	color:#ffffff;
+}
+/* Header */
+header ul{
+	margin:0;
+	padding:0;
+}
+
+header{
+	background:#35424a;
+	color:#ffffff;
+	padding:30px;
+	min-height:100%;
+	border-bottom:#e8491d 3px solid;
+	
+}
+
+header a{
+	color:#ffffff;
+	text-decoration:none;
+	font-size:100%;
+}
+
+header li{
+	float:left;
+	display:inline;
+	padding:0 30px 0 30px ;
+	
+}
+/* Mut butoanele in coltul din dreapta sus */
+header #branding{
+	float:left;
+	
+	
+}
+header #branding h1{
+	margin:0;
+	
+}
+
+header nav{
+	float:right;
+	margin-top:10px;
+	
+}
+/* Colorez AuctionX si butonul HOME in portocaliu */
+header .highlight, header .current a{
+	color:#e8491d;
+		
+	font-weight:bold;
+}
+/*Efect la scris */
+header a:hover{
+	color:#cccccc;
+	font-weight:bold;
+}
+
+/* Showcase */
+#newsletter{
+	border-bottom:#e8491d 3px solid;
+	border-top:#e8491d 3px solid;
+	padding:25px;
+	color:#ffffff;
+	background:#35424a;
+}
+
+#newsletter form{
+	float:right;
+	margin-top:30px;
+}
+
+#newsletter input[type="search"]{
+	padding:10px;
+	height:38px;
+	width:250px;
+}
+footer{
+	
+	padding:20px;
+	margin-top:20px;
+	color:#ffffff;
+	background-color:#e8491d;
+	font-size:15px;
+	text-align:center;
+	margin-top:15%;
+}
+.main {
+	width:35%;
+	margin:30px auto;
+    background:rgba(255,255,255,0.8);
+	box-shadow:0 0px #fff;
+	}
+
+.info{
+	width:100% -30px auto;
+	padding:10px;
+	font-size:20px;
+	color:#fff;
+    background-color:#999966;
+	font-weight:bold;
+	text-align:center;
+	text-shadow:1px 1px 1px #000;
+}
+.form-box{
+	padding:20px;
+	
+}
+.inp{
+	width:100%;
+	padding:2%;
+	padding-right:0%;
+	padding-left:0%;
+	border:2px solid-block;
+	margin-bottom:8px;
+	
+	
+	
+}
+.sub-btn{
+	width:100%;
+	padding:10px;
+	font-size:20px;
+	border:none;
+	background-color:#e8491d;
+	font-weight:bold;
+	color:#fff;
+	border-radius:20px;
+}
+.sub-btn:hover {
+cursor:pointer;
+background:#ffc107;
+color:#fff;
+}
+.inp:focus,.sub-btn:focus{
+	outline:none;
+}
+.inp:focus{
+	background-color:#ffffcc;
+}
+a{
+	text-decoration:none;
+	color:blue;
+}
+
+@media(max-width:380px){
+	.main {
+	width:70%;
+	}
+	
+}
+
+
+
+
+

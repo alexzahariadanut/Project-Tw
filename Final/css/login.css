@@ -1,0 +1,205 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:15px;
+	line-height:1.5;
+	
+	padding:0;
+	margin:0;
+	background-color:#35424a;
+	
+}
+.container{
+	width:85%;
+	margin:auto;
+	overflow:hidden;
+}
+.button_1{
+	height:38px;
+	background:#e8491d;
+	border:0;
+	padding-left:20px;
+	padding-right:20px;
+	color:#ffffff;
+}
+/* Header */
+header ul{
+	margin:0;
+	padding:0;
+}
+
+header{
+	background:#35424a;
+	color:#ffffff;
+	padding:30px;
+	min-height:100%;
+	border-bottom:#e8491d 3px solid;
+	
+}
+
+header a{
+	color:#ffffff;
+	text-decoration:none;
+	font-size:100%;
+}
+
+header li{
+	float:left;
+	display:inline;
+	padding:0 30px 0 30px ;
+	
+}
+/* Mut butoanele in coltul din dreapta sus */
+header #branding{
+	float:left;
+	
+	
+}
+header #branding h1{
+	margin:0;
+	
+}
+
+header nav{
+	float:right;
+	margin-top:10px;
+	
+}
+/* Colorez AuctionX si butonul HOME in portocaliu */
+header .highlight, header .current a{
+	color:#e8491d;
+		
+	font-weight:bold;
+}
+/*Efect la scris */
+header a:hover{
+	color:#cccccc;
+	font-weight:bold;
+}
+
+/* Showcase */
+#newsletter{
+	border-bottom:#e8491d 3px solid;
+	border-top:#e8491d 3px solid;
+	padding:25px;
+	color:#ffffff;
+	background:#35424a;
+}
+
+#newsletter form{
+	float:right;
+	margin-top:30px;
+}
+
+#newsletter input[type="search"]{
+	padding:10px;
+	height:38px;
+	width:250px;
+}
+footer{
+	
+	padding:20px;
+	margin-top:20px;
+	color:#ffffff;
+	background-color:#e8491d;
+	font-size:15px;
+	text-align:center;
+	margin-top:15%;
+}
+.login {
+	width:30%;
+	margin:30px auto;
+	background:#000;
+	color:#fff;
+	box-sizing:border-box;
+	padding:40px 30px;}
+	
+	
+.avatar{
+	width:30%;
+	
+	border-radius:50%;
+	position:relative;
+	left:35%;
+	
+	}
+#logintext{
+	margin:0;
+	padding:0 0 20px;
+	text-align:center;
+font-size:22px;}
+
+.login p{
+	margin:0;
+	padding:0;
+	font-weight:bold;
+}
+.login input {
+	width:100%;
+	margin-bottom:20px;
+}
+.login input[type="text"],input[type="password"]
+{border:none;
+border-bottom:1px solid #fff;
+background:transparent;
+outline:none;
+height:40px;
+color:#fff;
+font-size:16px;
+}
+.login input[type="submit"]
+{
+	border:none;
+	outline:none;
+	height:40px;
+	background:#e8491d;
+	color:rgb(255, 255, 255);
+	font-size:18px;
+	border-radius:20px;}
+.login input[type="submit"]:hover
+{cursor:pointer;
+background:#ffc107;
+color:#000;
+}
+.login a{
+	text-decoration:none;
+	color:blue;
+}
+
+.parola h2,h3{
+color:#ffffff;
+}
+
+.parola h2{
+	font-size:32px;
+}
+.parola p{
+	font-style: italic;
+	color:rgb(255, 255, 255);
+	}
+.parola input[type="submit"]
+{
+	border:none;
+	outline:none;
+	height:40px;
+	background:#e8491d;
+	color:rgb(255, 255, 255);
+	font-size:18px;
+	width:5%;}
+.parola input[type="email"]
+{width:20%;
+outline:none;
+height:34px;
+color:#fff;
+font-size:16px;
+}
+@media(max-width:620px){
+	.avatar {
+		width:60%;
+		left:20%;
+	}
+	.login{
+		width:50%;
+}}
+
+	
+	
