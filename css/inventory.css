@@ -107,3 +107,7 @@ h1{
 	position:relative;
 	left:30%;
 }
+#utilizator a{
+	font-size:150%;
+	color:#006400;
+}
