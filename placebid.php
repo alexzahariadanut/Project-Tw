@@ -5,13 +5,13 @@
 	session_start();
 	$username=$_SESSION['utilizator']; // userul curent
 	
-	$category_name=$_GET['category_name'];
-	
+
 	if(isset($_POST['submit']))
 	{	
 		$moneyValue=$_POST['money'];
 		$product_id=$_POST['row_id'];
 		$minimumBid=$_POST['min_bid'];
+		$categoryName=$_POST['catname'];
 		
 		if($moneyValue >= $minimumBid)
 		{
@@ -28,10 +28,8 @@
 			$sql_insert = "INSERT INTO bids (bidder_id,auction_id,bid_amount) VALUES (".$id_user.",".$auction_id.",".$moneyValue.")";
 			mysqli_query($conn, $sql_insert);
 		}
-		else 
-			echo 'Introduceti o suma de bani mai mare decat Current Price';
-		
-	header("Location:categoriesafterlogin.php"); // dupa apasarea butonului Place Bid se face redirectarea catre categories.php
+	//$url="produs.php?category_name=".$categoryName;
+	header("Location:produs.php?category_name=$categoryName"); // dupa apasarea butonului Place Bid se face redirectarea catre categories.php
    }
    else 
 	   echo 'Eroare  ';

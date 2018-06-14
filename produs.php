@@ -112,6 +112,7 @@
 					<input type="Submit" class="button_bid" name="submit" value="Place Bid">
 					<input type=hidden id='rowid' value="<?php echo $row['product_id']; ?>" name='row_id'> <!-- folosit pentru a trimite id-ul produsului catre placeBid.php -->
 					<input type=hidden id='minbid' value="<?php echo $minBid; ?>" name='min_bid'>
+					<input type=hidden id='catname' value="<?php echo $category_name; ?>" name='catname'> <!-- trasmite catre placeBid.php categoria -->
 				</form>					
             </div>
             <?php
