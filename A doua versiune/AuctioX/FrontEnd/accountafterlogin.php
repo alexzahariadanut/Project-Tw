@@ -1,5 +1,7 @@
 <?php
 		session_Start();
+		//$_SESSION["password_not_same"] = "false";
+		//$_SESSION["changed_password"] = "false";
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,29 +46,10 @@
 				</ul>
 			</div>
 			
-			<div id="formular">
-					<h1>Change your username</h1>
-					
-					<form name="changeUsername" action="changeUsername.php" method="post">
 
-					
-
-					<p>
-
-						<label for="a">Enter new username:</label>
-
-						<input id="a" type="text"  name="newUsername"  />	
-
-					</p>
-					
-					
-					<input  type ="submit" value="Change Username"  name="submit_username" />
-					
-			
-			</div>
 	<script>		
 	function myFunction() {
-    var x = document.getElementById("b");
+    var x = document.getElementById("a");
     if (x.type === "password") {
         x.type = "text";
     } else {
@@ -77,7 +60,7 @@
 			<div id="formular">
 					<h1>Change your password</h1>
 					
-					<form name="changePassword" action="changePassword.php" method="post">
+					<form name="changePassword" action="account_action.php" method="post">
 
 					
 
@@ -85,26 +68,32 @@
 
 						<label for="a">Enter new password:</label>
 
-						<input id="a" type="password"  name="newPassword"  />	
-
+						<input id="a" type="password"  name="newPassword" required />	
+					
 					</p>
 					
-					<p>
-
-						<label for="b">Confirm new password:</label>
-
-						<input id="b" type="password"  name="confirm_newPassword"  />	
-
-					</p>
 					<p> <input type="checkbox" onclick="myFunction()">Show Password </p>
 					<input  type ="submit" value="Change Password"  name="submit_password"  />
-					
-			
+					<p>   <?php   if($_SESSION["password_not_same"] == "true")  
+					{
+						echo "Passwords don't match!";
+						
+					}
+					$_SESSION["password_not_same"] = "false";
+							if ($_SESSION["changed_password"] == "true")
+							{
+								echo "You changed you password";
+							}
+							$_SESSION["changed_password"] = "false";							
+							?>    
+					</p>
+			</form>
 			</div>
+			<br />
 			<div id="formular">
 					<h1>Change your e-mail</h1>
 					
-					<form name="changeEmail" action="changeEmail.php" method="post">
+					<form name="changeEmail" action="change_email.php" method="post">
 
 					<p>Your e-mail is :  <?php include './BackEnd/db.php' ;
 											$user = $_SESSION['utilizator'];
@@ -118,15 +107,28 @@
 
 						<label for="a">Enter new e-mail:</label>
 
-						<input id="a" type="e-mail"  name="newEmail"  />	
+						<input id="a" type="text"  name="newEmail" required  />	
 
 					</p>
-					
-					
+					<p>
+					<?php   if($_SESSION["email_empty"] == "true")  
+					{
+						echo "Please enter an email!";
+						
+					}
+					$_SESSION["email_empty"] = "false";
+							if ($_SESSION["email_changed"] == "true")
+							{
+								echo "You changed you email";
+							}
+							$_SESSION["email_changed"] = "false";							
+							?>    
+					</p>
 					<input  type ="submit" value="Change Email"  name="submit_email" />
-					
+					</form>
 			
 			</div>
+			<br />
 			<div id="formular">
 					<h1>Change your phone number</h1>
 					
@@ -144,14 +146,16 @@
 
 						<label for="a">Enter new phone number:</label>
 
-						<input id="a" type="number"  name="newEmail"  />	
+						<input id="a" type="number"  name="newPhoneNr"  required />	
 
 					</p>
 					
 					
 					<input  type ="submit" value="Change Phone Number"  name="submit_phonenr" />
+					</form>
 					
 			</div>
+			<br />
 			<div id="formular">
 					<h1>Change your address</h1>
 					
@@ -220,8 +224,9 @@
 					</p>
 					
 					<input  type ="submit" value="Change Adress"  name="submit_address" />
-					
+					</form>
 			
 			</div>
+			<br />
 	</body>
 </html>
