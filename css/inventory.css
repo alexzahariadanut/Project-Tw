@@ -103,3 +103,7 @@ h1{
 #paypal button{
 	position:center;
 }
+#utilizator{
+	position:relative;
+	left:30%;
+}
