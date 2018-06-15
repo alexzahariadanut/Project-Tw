@@ -31,15 +31,15 @@
 			</div>
 		</header>
 		
-		<section id="newsletter">
+			<section id="newsletter">
 			<div class="container">
-				<form action="searchafterlogin.php">
-					<input type="search" name="q" placeholder="Search" required>
-					<button type="Submit" class="button_1">Search</button>
-				</form>
-			
-			</div>
-		</section>
+			<form action="searchafterlogin.php" method="POST">
+				<input  type="text" name="search" placeholder="Search">
+				<button type="submit" name="submit-search" class="button_1">Search</button>
+			</form>
+
+				
+			</section>	
 		
 		<section id="main">
 			<div class="container">
