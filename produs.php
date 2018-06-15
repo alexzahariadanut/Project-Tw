@@ -127,9 +127,11 @@
 									
 							}
 							else // nu se afla in transactions
-								{
-									$sql_insert_transaction="INSERT INTO transactions ( seller_id, buyer_id,auction_id,amount_of_money) VALUES ( '$sellerID','$winnerID','$auction_id','$currentPrice')";
-									mysqli_query($conn, $sql_insert_transaction);
+								{	if ( $sellerID != $winnerID ) // nu se face tranzactia daca nu a licitat nimeni pentru produs 
+									{	
+										$sql_insert_transaction="INSERT INTO transactions ( seller_id, buyer_id,auction_id,amount_of_money) VALUES ( '$sellerID','$winnerID','$auction_id','$currentPrice')";
+										mysqli_query($conn, $sql_insert_transaction);
+									}
 									
 								} 
 							}
