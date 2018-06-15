@@ -47,6 +47,30 @@
 		</section>
 		
 		<section id="main">
+		    
+			<div class="filter_div">
+				<div class="left_filter">
+				<form  class="filter" method="post">
+					<h4>Grad de uzura </h4>
+					<input type="radio" name="grad_uzura" value="Folosit" > Folosit 
+					<input type="radio" name="grad_uzura"  value="Nou"> Nou 
+					<input class="submit "type="submit" name="submit_g" value="Filter">
+				</form>
+				</div>
+				<div class="right_filter">
+				<form  class="filter" method="post">
+					<h4> Price range </h4>
+					<input type="number" min=0 max=9999999 name="user_min_price"> Min Price
+					<input type="number" min=0 max=9999999 name="user_min_price"> Max Price
+					<input class="submit "type="submit" name="submit_price" value="Filter">
+				</form>
+				</div>
+			</div>
+			<?php
+				if(isset($_POST['submit']))
+					echo $_POST['grad_uzura'];
+			?>
+			
 			<div class="container">		
 				
 				<?php
