@@ -67,6 +67,12 @@
 						
 						$auction_id = $row_result_sql_auction['auction_id'];
 						
+						$sql2="select bidder_id,MAX(bids.bid_amount) from bids join auctions on auctions.auction_id=bids.auction_id join products on auctions.product_id=products.product_id where auctions.product_id=" .$row['product_id']." group by bids.auction_id"; 
+						$result2=mysqli_query($conn,$sql2); 
+						$row2=mysqli_fetch_array($result2);          // pretul curent este cel mai mare bid din tabelul bids corespunzatorul produsului
+						$currentPrice=$row2['MAX(bids.bid_amount)']; // in cazul in care nu a fost plasat nici un bid current price va fi un pret minim stabilit de vanzator in momentul in care completaza formularul de upload, acesta va fi implicit adaugat in tabelul bids
+						$winnerID=$row2['bidder_id'];		// ID-ul userului cu cel mai mare bid corespunzator produsului (poate fi vanzatorul)
+						
 						
 						 if( $current_date < $row_result_sql_auction['end_date'] ) //  daca licitatia este in desfasurare
 							{
@@ -91,11 +97,6 @@
 				<p id="descriere-produs">  <?php echo $row["product_description"]; ?> </p>
 				<p id="current-price">Current price :
 					<?php 
-						$sql2="select bidder_id,MAX(bids.bid_amount) from bids join auctions on auctions.auction_id=bids.auction_id join products on auctions.product_id=products.product_id where auctions.product_id=" .$row['product_id']." group by bids.auction_id"; 
-						$result2=mysqli_query($conn,$sql2); 
-						$row2=mysqli_fetch_array($result2);          // pretul curent este cel mai mare bid din tabelul bids corespunzatorul produsului
-						$currentPrice=$row2['MAX(bids.bid_amount)']; // in cazul in care nu a fost plasat nici un bid current price va fi un pret minim stabilit de vanzator in momentul in care completaza formularul de upload, acesta va fi implicit adaugat in tabelul bids
-						$winnerID=$row2['bidder_id'];		// ID-ul userului cu cel mai mare bid corespunzator produsului (poate fi vanzatorul)
 					
 						echo $currentPrice;
 					?>$ 
@@ -121,8 +122,10 @@
 							{						
 							 $sql_find_transaction = "SELECT * FROM transactions WHERE transactions.auction_id='$auction_id'";
 							 $result_find_transaction = mysqli_query($conn,$sql_find_transaction);
-							if( mysqli_num_rows($result_find_transaction) >0) // s-a gasit in transaction licitatia cu id-ul $auction_id
-							{}
+							if( mysqli_num_rows($result_find_transaction) > 0) // s-a gasit in transaction licitatia cu id-ul $auction_id
+							{
+									
+							}
 							else // nu se afla in transactions
 								{
 									$sql_insert_transaction="INSERT INTO transactions ( seller_id, buyer_id,auction_id,amount_of_money) VALUES ( '$sellerID','$winnerID','$auction_id','$currentPrice')";
