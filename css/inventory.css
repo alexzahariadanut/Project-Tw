@@ -110,6 +110,7 @@ h1{
 #utilizator a{
 	font-size:150%;
 	color:#006400;
+	text-decoration:none;
 }
 #utilizator table,th,td{
 	border: 1px solid black;
