@@ -42,11 +42,26 @@
 				<?php include'db.php';
 				$sql="select * from users";
 				$result=mysqli_query($conn,$sql);
-				while($row=mysqli_fetch_array($result))
-				{echo "Nume cont:".$row['username']."  Nume utilizator:".$row['first_name']."  Prenume utilizator:".$row['last_name'];
 				?>
-				<a> Sterge cont</a><br>
+				<table>
+				<tr>
+					<th>Nume cont</th>
+					<th>Nume utilizator</th>
+					<th>Prenume utilizator</th>
+					<th>Actiune</th>
+				</tr>
+				
+				<?php
+				while($row=mysqli_fetch_array($result))
+				{?>
+				<tr>
+					<td><?php echo $row['username']?></td>
+					<td><?php echo $row['first_name']?></td>
+					<td><?php echo $row['last_name']?></td>
+					<td><a href="StergeCont.php?userID=<?php echo$row['user_id']?>">Stergere cont</a></td>
+				</tr>
 				<?php }?>
+				</table>
 			</div>
 	</body>
 </html>
