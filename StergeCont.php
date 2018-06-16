@@ -118,7 +118,7 @@ IF(mysqli_query($conn,$sql))
 				<?php include'db.php';
 				$sql="select * from users";
 				$result=mysqli_query($conn,$sql);
-					echo "Utilizatorul s-a sters cu succes";
+					echo "Utilizatorul nu s-a putut sterge";
 				?>
 				<table>
 				<tr>
