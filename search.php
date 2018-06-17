@@ -102,11 +102,7 @@
 													echo $minBid;
 												 ?>
 					$</p>
-					<form id="place-bid" action="placebid.php" method="post">
-						Your Bid:<br>
-						<input type="text"  placeholder="$$$" name="money">
-						<input type="Submit" class="button_bid" name="submit" value="Place Bid">
-					</form>
+					
 					
 					
             </div>
