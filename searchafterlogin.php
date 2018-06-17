@@ -52,7 +52,7 @@
 		
 		<section id="newsletter">
 			<div class="container">
-			<form action="search.php" method="POST">
+			<form action="searchafterlogin.php" method="POST">
 				<input  type="text" name="search" placeholder="Search" required>
 				<button type="submit" name="submit-search" class="button_1">Search</button>
 			</form>
