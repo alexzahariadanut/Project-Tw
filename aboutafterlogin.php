@@ -8,7 +8,7 @@
 		<meta name="keywords" content="Web design">
 		<meta name="author" content="Alex Zaharia,Sima Paul,Rebegea Bogdan,Iulian Crisnuta">
 		<title>AuctioX | About us</title>
-		<link rel="stylesheet" href="./css/style.css"> 
+		<link rel="stylesheet" href="./css/alex.css">  
 	</head>
 	<body>
 		<header>
@@ -30,6 +30,13 @@
 				</nav>
 			</div>
 		</header>
+		
+		<section id="showcase">
+			<div class="container">
+				<h1>AuctioX   Professional   Website</h1>
+				<p>Buyers come prepared to buy – they want the items being sold!</p>
+			</div>	
+		</section>
 		
 			<section id="newsletter">
 			<div class="container">
