@@ -65,7 +65,7 @@
 					<li><a href="purchase_history.php"> <img id="side-pics2" src="./img/history.jpg" alt="Purchase History Icon"> Purchase history</a></li>
 					<li><a href="inventory.php"> <img id="side-pics3" src="./img/inventory.jpg" alt="Inventory Icon"> Inventory</a></li>
 					
-					<li><a href="FormatAtom.php"> <img id="side-pics4" src="./img/payment.jpg" alt="Payment Icon"> Stiri In Format Atom</a></li>
+					<li><a href="FormatAtom2.php"> <img id="side-pics4" src="./img/payment.jpg" alt="Payment Icon"> Stiri In Format Atom</a></li>
 					<li><a href="licitatii.xml"> <img id="side-pics4" src="./img/payment.jpg" alt="Payment Icon"> XML generare</a></li>
 					<li><a href="json.php"> <img id="side-pics4" src="./img/payment.jpg" alt="Payment Icon"> JSON generare</a></li>
 					<li><a href="pdf.php"> <img id="side-pics4" src="./img/payment.jpg" alt="Payment Icon"> PDF generare</a></li>
