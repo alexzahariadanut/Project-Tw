@@ -23,14 +23,14 @@
 		<header>
 			<div class="container">
 				<div id="branding">
-					<h1><a href="indexafterlogin.php"><span class="highlight">AuctioX</span> Web Page</a></h1>
+					<h1><a href="indexAdmin.php"><span class="highlight">AuctioX</span> Web Page</a></h1>
 				</div>
 				<nav>
 				<ul>
-					<li><a href="indexafterlogin.php">Home</a></li>
-					<li><a href="aboutafterlogin.php">About us</a></li>
-					<li><a href="categoriesafterlogin.php">Categories</a></li>
-					<li><a href="accountafterlogin.php">Hello admin <?php echo $_SESSION['utilizator']?></a></li>
+					<li><a href="indexAdmin	.php">Home</a></li>
+					<li><a href="aboutAdmin.php">About us</a></li>
+					<li><a href="categoriesAdmin.php">Categories</a></li>
+					<li><a href="accountAdmin.php">Hello admin <?php echo $_SESSION['utilizator']?></a></li>
 					<li><a href="logout.php">
 					Logout</a></li>
 					
@@ -52,7 +52,7 @@
 		
 		<section id="newsletter">
 			<div class="container">
-			<form action="searchadmin.php" method="POST">
+			<form action="searchAdmin.php" method="POST">
 				<input  type="text" name="search" placeholder="Search" required>
 				<button type="submit" name="submit-search" class="button_1">Search</button>
 			</form>
