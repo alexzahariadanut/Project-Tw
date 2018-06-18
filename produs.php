@@ -58,18 +58,35 @@
 					<input class="submit "type="submit" name="submit_g" value="Filter">
 				</form>
 				</div>
-				<div class="right_filter">
+			<!--	<div class="right_filter">
 				<form  class="filter" method="post">
 					<h4> Price range </h4>
 					<input type="number" min=0 max=9999999 name="user_min_price"> Min Price
 					<input type="number" min=0 max=9999999 name="user_min_price"> Max Price
 					<input class="submit "type="submit" name="submit_price" value="Filter">
 				</form>
-				</div>
+				</div> -->
 			</div>
 			<?php
-				if(isset($_POST['submit']))
-					echo $_POST['grad_uzura'];
+			
+				$category_name=$_GET['category_name'];
+				
+				if(isset($_POST['submit_g']))
+				{		
+						$grad_uzura=$_POST['grad_uzura'];
+						echo $grad_uzura;
+						$sql="select * from products 
+						join categories on products.category_id=categories.category_id 
+						join auctions on products.product_id=auctions.product_id
+						WHERE categories.category_name LIKE '%".$category_name."%'
+						AND products.grad_uzura LIKE '%".$grad_uzura."%'						
+						order by products.product_id asc";
+				}
+				else
+					$sql="select * from products 
+						join categories on products.category_id=categories.category_id 
+						WHERE categories.category_name LIKE '%".$category_name."%'  
+						order by product_id asc";						
 			?>
 			
 			<div class="container">		
@@ -79,7 +96,6 @@
 					
 					$category_name=$_GET['category_name'];
 				
-					$sql="select * from products join categories on products.category_id=categories.category_id where categories.category_name LIKE '%".$category_name."%' order by product_id asc";
 					$result=mysqli_query($conn,$sql); // toate coloanele din tabelul products  pentru produsele din categoria transmisa prin $category_name
 				
 					while($row=mysqli_fetch_array($result)) // pentru fiecare produs
