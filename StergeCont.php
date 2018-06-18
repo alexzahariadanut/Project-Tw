@@ -1,6 +1,25 @@
 <?php
 include 'db.php';
 $user_id=$_GET['userID'];
+$sql="delete from bids where bidder_id='$user_id'";
+$result=mysqli_query($conn,$sql);
+$sql="select auction_id from auctions where seller_id='$user_id'";
+$result=mysqli_query($conn,$sql);
+while($row=mysqli_fetch_array($result))
+if($row['auction_id']>0)
+{$parametru=$row['auction_id'];
+{$std="delete from bids where auction_id='$parametru'";
+mysqli_query($conn,$std);
+$sql_t="delete from auctions where auction_id='$parametru'";
+mysqli_query($conn,$sql_t);
+$sql_ver="delete from transactions where auction_id='$parametru'";
+mysqli_query($conn,$sql_ver);
+}
+}
+$sql_v="delete from transactions where seller_id='$user_id' or buyer_id='$user_id'";
+mysqli_query($conn,$sql_v);
+$sql_delete="delete from products where seller_id='$user_id'";
+mysqli_query($conn,$sql_delete);
 $sql="DELETE FROM users where user_id='$user_id'";
 IF(mysqli_query($conn,$sql))
 {session_start();?>
@@ -40,14 +59,20 @@ IF(mysqli_query($conn,$sql))
 				
 				<ul>
 					<li><a href="VizualizareUseri.php"> <img id="side-pics1" src="./img/myaccount.jpg" alt="Account Icon">Vizualizare Useri</a></li>
-					
+					<li><a href="VizualizareLicitatii.php"> <img id="side-pics1" src="./img/myaccount.jpg" alt="Account Icon">Vizualizare Licitatii</a></li>
+					<li><a href="AdaugareAdmin.php"> <img id="side-pics1" src="./img/admin.png" alt="Account Icon">Adaugare Admin</a></li>
 				</ul>
 			</div>
 			<div id="utilizator">
 				<?php include'db.php';
-				$sql="select * from users";
+				$user=$_SESSION['utilizator'];
+				$sql="select * from users where username<>'$user'";
 				$result=mysqli_query($conn,$sql);
-					echo "Utilizatorul s-a sters cu succes";
+					echo "Utilizatorul s-a sters cu succes"."<br>";
+				if(mysqli_num_rows($result)==0)
+					echo "Nu s-a gasit nici un utilizator in baza de date de afisat";
+				else
+				{
 				?>
 				<table>
 				<tr>
@@ -66,7 +91,8 @@ IF(mysqli_query($conn,$sql))
 					<td><?php echo $row['last_name']?></td>
 					<td><a href="StergeCont.php?userID=<?php echo$row['user_id']?>">Stergere cont</a></td>
 				</tr>
-				<?php }?>
+				<?php }
+				}?>
 				</table>
 			</div>
 	</body>
@@ -110,15 +136,21 @@ IF(mysqli_query($conn,$sql))
 			<div id="sidebar">
 				
 				<ul>
-					<li><a href="VizualizareUseri.php"> <img id="side-pics1" src="./img/myaccount.jpg" alt="Account Icon">Vizualizare Useri</a></li>
-					
+					<li><a href="VizualizareUseri.php"> <img id="side-pics1" src="./img/avatar.png" alt="Account Icon">Vizualizare Useri</a></li>
+					<li><a href="VizualizareLicitatii.php"> <img id="side-pics1" src="./img/myaccount.jpg" alt="Account Icon">Vizualizare Licitatii</a></li>
+					<li><a href="AdaugareAdmin.php"> <img id="side-pics1" src="./img/admin.png" alt="Account Icon">Adaugare Admin</a></li>
 				</ul>
 			</div>
 			<div id="utilizator">
 				<?php include'db.php';
-				$sql="select * from users";
+				$user=$_SESSION['utilizator'];
+				$sql="select * from users where username<>'$user'";
 				$result=mysqli_query($conn,$sql);
-					echo "Utilizatorul nu s-a putut sterge";
+					echo "Utilizatorul nu s-a putut sterge"."<br>";
+					if(mysqli_num_rows($result)==0)
+					echo "Nu s-a gasit nici un utilizator in baza de date de afisat";
+				else
+				{
 				?>
 				<table>
 				<tr>
@@ -137,7 +169,8 @@ IF(mysqli_query($conn,$sql))
 					<td><?php echo $row['last_name']?></td>
 					<td><a href="StergeCont.php?userID=<?php echo$row['user_id']?>">Stergere cont</a></td>
 				</tr>
-				<?php }?>
+				<?php }
+				}?>
 				</table>
 			</div>
 	</body>
