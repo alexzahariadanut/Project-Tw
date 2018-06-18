@@ -85,6 +85,12 @@
 	$timestamp = strtotime($end_date_form);
 	$end_date = date("Y-m-d H:i:s", $timestamp);
     	$stmt1->execute();
+	$stmt_img = $conn->prepare("UPDATE products set image=? WHERE product_id='$product_id' ");
+	$null = NULL;
+	$stmt_img->bind_param("b", $null);
+	$stmt_img->send_long_data(0, file_get_contents($_FILES['image']['tmp_name']));
+	$stmt_img->execute();
+	$stmt_img->close();
 	
 	//prepare sql and bind parameters for bids
 	$stmt2 = $conn->prepare("INSERT INTO bids (bidder_id, auction_id, bid_amount, bid_time) 
