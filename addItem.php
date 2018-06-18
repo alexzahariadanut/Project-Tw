@@ -61,9 +61,9 @@
     
 	
 	// prepare sql and bind parameters for auctions
-    $stmt1 = $conn->prepare("INSERT INTO auctions (product_id, seller_id) 
-	VALUES (?,?);");
-	$stmt1->bind_param("ii", $product_id, $seller_id_auctions);
+    $stmt1 = $conn->prepare("INSERT INTO auctions (product_id, seller_id, end_date) 
+	VALUES (?,?,?);");
+	$stmt1->bind_param("iis", $product_id, $seller_id_auctions, $end_date);
 	/*
 	$stmt->bindParam(':product_id',$product_id);
 	$stmt->bindParam(':seller_id', $seller_id_auctions);
@@ -81,7 +81,10 @@
     //$end_date = $_POST["date"];
 	//$end_date = date('Y-m-d H:i:s ', $date);
 	//echo "end date: ".$end_date;
-    $stmt1->execute();
+	$end_date_form = $_POST['end_date'];
+	$timestamp = strtotime($end_date_form);
+	$end_date = date("Y-m-d H:i:s", $timestamp);
+    	$stmt1->execute();
 	
 	//prepare sql and bind parameters for bids
 	$stmt2 = $conn->prepare("INSERT INTO bids (bidder_id, auction_id, bid_amount, bid_time) 
@@ -111,7 +114,7 @@
 	
 	
     }
-	//header('location: inventory.php');
+	header('location: inventory.php');
 	//exit();
     //sleep(5);
 
