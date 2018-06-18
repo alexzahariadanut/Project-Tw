@@ -18,7 +18,7 @@ if($db->affected_rows >=1) {
   
   <entry>
     <title><?php echo $row['product_name'];?></title>
-    <link href="http://localhost/Proiect/Nou/Project-Tw-master/searchfeed.php"/>
+    <link href="searchfeed.php?productID=<?php echo$row['product_id']?>"/>
 
     <updated><?php echo $row['end_date'];?></updated>
     <summary><?php echo $row['product_description'];?></summary>
