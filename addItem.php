@@ -94,7 +94,7 @@
 	//insert into bids 
 	$bidder_id = $seller_id_auctions;
 	
-	$sql = "SELECT auction_id from auctions WHERE seller_id = '$seller_id_auctions'";
+	$sql = "SELECT auction_id from auctions WHERE seller_id = '$seller_id_auctions' ORDER BY auction_id DESC";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($result);
 	$auction_id = $row['auction_id'];
