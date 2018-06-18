@@ -50,21 +50,21 @@
 		<section id="boxes">
 			<div class="container">
 				<div class="box">
-					<a href="categories.html">
+					<a href="produsAdmin.php?category_name=Cars">
 						<img src="./img/Cars.jpg" alt="">
 						<h3>Cars</h3>
 						<p>It's frequently said that buying a car at auction is a simple way of saving a lot of money.</p>
 					</a>
 				</div>
 				<div class="box">
-					<a href="categories.html">
+					<a href="produsAdmin.php?category_name=Houses">
 						<img src="./img/houses.jpg" alt="">
 						<h3>Houses</h3>
 						<p>Why would anyone be interested in buying a property at auction? For one thing, an auction offers a first chance to snap up a type of property you might not otherwise be able to afford.</p>
 				    </a>
 				</div>
 				<div class="box">
-					<a href="categories.html">
+					<a href="produsAdmin.php?category_name=TV">
 						<img src="./img/auto5.jpg" alt="">
 						<h3>Objects</h3>
 						<p>Many people visit live auctions hoping for a bargain.</p>
