@@ -68,8 +68,7 @@
 	if(isset($_POST['submit-search']))
 	{
 		$search = mysqli_real_escape_string($conn, $_POST['search']);
-		$sql = "Select * from products where product_name LIKE '%$search%' or product_description like '%$search%' 
-		or seller_id like '%$search%' or category_id like '%$search%'";
+		$sql = "Select * from products join auctions on products.product_id=auctions.product_id where product_name LIKE '%$search%' or product_description like '%$search%'";
 		$result = mysqli_query($conn,$sql);
 		$queryResult = mysqli_num_rows($result);
 		
