@@ -16,6 +16,7 @@
 		<meta name="author" content="Alex Zaharia,Sima Paul,Rebegea Bogdan,Iulian Crisnuta">
 		<title>AuctioX | Produs</title>
 		<link rel="stylesheet" href="./css/style2.css"> 
+		<link rel="stylesheet" href="./css/alex2.css"> 
 	</head>
 	<body>
 		<header>
@@ -40,7 +41,7 @@
 		
 			<section id="newsletter">
 			<div class="container">
-			<form action="searchadmin.php" method="POST">
+			<form action="searchAdmin.php" method="POST">
 				<input  type="text" name="search" placeholder="Search">
 				<button type="submit" name="submit-search" class="button_1">Search</button>
 			</form>
