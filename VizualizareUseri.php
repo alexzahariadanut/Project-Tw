@@ -34,14 +34,20 @@
 			<div id="sidebar">
 				
 				<ul>
-					<li><a href="VizualizareUseri.php"> <img id="side-pics1" src="./img/myaccount.jpg" alt="Account Icon">Vizualizare Useri</a></li>
-					
+					<li><a href="VizualizareUseri.php"> <img id="side-pics1" src="./img/avatar.png" alt="Account Icon">Vizualizare Useri</a></li>
+					<li><a href="VizualizareLicitatii.php"> <img id="side-pics1" src="./img/myaccount.jpg" alt="Account Icon">Vizualizare Licitatii</a></li>
+					<li><a href="AdaugareAdmin.php"> <img id="side-pics1" src="./img/admin.png" alt="Account Icon">Adaugare Admin</a></li>
 				</ul>
 			</div>
 			<div id="utilizator">
 				<?php include'db.php';
-				$sql="select * from users";
+				$user=$_SESSION['utilizator'];
+				$sql="select * from users where username<>'$user'";
 				$result=mysqli_query($conn,$sql);
+				if(mysqli_num_rows($result)==0)
+					echo "Nu s-a gasit nici un utilizator in baza de date de afisat";
+				else
+				{
 				?>
 				<table>
 				<tr>
@@ -60,7 +66,8 @@
 					<td><?php echo $row['last_name']?></td>
 					<td><a href="StergeCont.php?userID=<?php echo$row['user_id']?>">Stergere cont</a></td>
 				</tr>
-				<?php }?>
+				<?php }
+				}?>
 				</table>
 			</div>
 	</body>
