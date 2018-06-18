@@ -13,6 +13,8 @@ $product_id=$_GET['productID'];
 		<meta name="author" content="Alex Zaharia,Sima Paul,Rebegea Bogdan,Iulian Crisnuta">
 		<title>AuctioX | Produs</title>
 		<link rel="stylesheet" href="./css/style2.css"> 
+		<link rel="stylesheet" href="./css/alex2.css"> 
+		
 	</head>
 	<body>
 		<header>
@@ -35,10 +37,10 @@ $product_id=$_GET['productID'];
 		
 		<section id="newsletter">
 			<div class="container">
-				<form action="search.php">
-					<input type="search" name="q" placeholder="Search" required>
-					<button type="Submit" class="button_1">Search</button>
-				</form>
+				<form action="searchafterlogin.php" method="POST">
+				<input  type="text" name="search" placeholder="Search" required>
+				<button type="submit" name="submit-search" class="button_1">Search</button>
+			</form>
 			
 			</div>
 		</section>
