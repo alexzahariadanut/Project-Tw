@@ -21,11 +21,11 @@
 		<header>
 			<div class="container">
 				<div id="branding">
-					<h1><a href="index.html"><span class="highlight">AuctioX</span> Web Page</a></h1>
+					<h1><a href="index.php"><span class="highlight">AuctioX</span> Web Page</a></h1>
 				</div>
 				<nav>
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="about.html">About us</a></li>
 					<li class="current"><a href="categories.php">Categories</a></li>
 					<li><a href="login.html">Login</a></li>
