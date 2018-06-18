@@ -99,17 +99,17 @@
 
 						<label for="b">Condition:</label>   
 
-						<input id="b" type="text" name="condition" required />
-
-						
-
+						<select id="b"  name="condition" type="text" required />
+							<option value="Nou">Nou </option>
+							<option value="Folosit">Folosit </option>
+						</select>
 					</p>
 
 					<p>
 
 						<label for="c">End date: </label>   
 
-						<input  id="c" type="datetime" name="date" required placeholder="Ex. 2018.06.13 23:59 "/>
+						<input  id="c" type="text" name="date" required placeholder="Ex. 2018.06.13 23:59:00 "/>
 
 					</p>
 
@@ -147,7 +147,7 @@
 
 						<label for="g"> Pictures: </label>
 
-						<input id="g" type="file" accept="image/*" multiple name="pictures" required />
+						<input id="g" type="file" accept="image/*" multiple name="image" required />
 
 					</p>
 
