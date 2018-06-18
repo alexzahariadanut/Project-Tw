@@ -1,14 +1,14 @@
-<?php session_Start()?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-		<meta name="description" content="The MDN Web Docs Learning Area aims to provide complete beginners to the Web with all they need to know to get started with developing web sites and applications.">
 		<meta name="keywords" content="Web design">
 		<meta name="author" content="Alex Zaharia,Sima Paul,Rebegea Bogdan,Iulian Crisnuta">
-		<title>AuctioX | About us</title>
-		<link rel="stylesheet" href="./css/alex.css">  
+		<title>AuctioX | My Account</title>
+		<link rel="stylesheet" href="./css/style2.css"> 
+		<link rel="stylesheet" href="./css/inventory.css">
 	</head>
 	<body>
 		<header>
@@ -19,9 +19,9 @@
 				<nav>
 				<ul>
 					<li><a href="indexAdmin.php">Home</a></li>
-					<li class="current"><a href="aboutAdmin.php">About us</a></li>
+					<li><a href="aboutAdmin.php">About us</a></li>
 					<li><a href="categoriesAdmin.php">Categories</a></li>
-					<li><a href="accountAdmin.php">Hello admin <?php echo $_SESSION['utilizator']?></a></li>
+					<li class="current"><a href="accountAdmin.php">Hello admin <?php echo $_SESSION['utilizator']?></a></li>
 					<li><a href="logout.php">
 					Logout</a></li>
 				
@@ -30,62 +30,15 @@
 				</nav>
 			</div>
 		</header>
-		
-		<section id="showcase">
-			<div class="container">
-				<h1>AuctioX   Professional   Website</h1>
-				<p>Buyers come prepared to buy – they want the items being sold!</p>
-			</div>	
-		</section>
-		
-			<section id="newsletter">
-			<div class="container">
-			<form action="searchadmin.php" method="POST">
-				<input  type="text" name="search" placeholder="Search">
-				<button type="submit" name="submit-search" class="button_1">Search</button>
-			</form>
-
+		</header>
+			<div id="sidebar">
 				
-			</section>
-		
-		<section id="main">
-			<div class="container">
-				<aside id="sidebar">
-					<div class="dark">
-					<h3>What we do?</h3>
-				<p>	Whether you are buying new or used, plain or luxurious, commonplace or rare, trendy or one-of-a-kind – if it exists in the world, it probably is for sale on AuctioX. Our mission is to be the world’s favorite destination for discovering great value and unique selection.
-
-					We give sellers the platform, solutions, and support they need to grow their businesses and thrive. We measure our success by our customers' success.
-				</p>
-				</div>
-				</aside>
-				
-				<aside id="side">
-					<div class="dark">
-						<h3>	What sets us apart
-								Our vision for commerce is one that is enabled by people, powered by technology, and open to everyone.
-						</h3>
-						<p>		We empower people and create economic opportunity.
-
-							We focus on partnering with our sellers, not competing with them. We are building stronger connections between buyers and sellers with product experiences that are fast, mobile, and secure. And we are transforming the individual selling experience to help you turn the things you no longer need into cash you can use.
-						</p>
-					</div>
-				</aside>
-				
-				
-				<aside id="sidebars">
-					<div class="dark">
-					<h3>Partner to Sellers</h3>
-				<p>For more than two decades, AuctioX has played a central role in creating an inclusive and accessible commerce platform that enables anyone to participate in the global economy.
-				</p>
-				</div>
-				</aside>
-				
+				<ul>
+					<li><a href="VizualizareUseri.php"> <img id="side-pics1" src="./img/avatar.png" alt="Account Icon">Vizualiare Useri</a></li>
+					<li><a href="VizualizareLicitatii.php"> <img id="side-pics1" src="./img/myaccount.jpg" alt="Account Icon">Vizualizare Licitatii</a></li>
+					<li><a href="AdaugareAdmin.php"> <img id="side-pics1" src="./img/admin.png" alt="Account Icon">Adaugare Admin</a></li>
+				</ul>
 			</div>
-		</section>
-		
-		<footer>
-			<p>AuctioX Web Page,Copyright &copy; 2018</p>
-		</footer>
+			
 	</body>
 </html>
