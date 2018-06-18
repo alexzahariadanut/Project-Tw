@@ -115,3 +115,6 @@ h1{
 #utilizator table,th,td{
 	border: 1px solid black;
 }
+#utilizator table{
+	width:50%;
+}
