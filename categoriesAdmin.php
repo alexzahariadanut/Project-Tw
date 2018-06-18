@@ -34,7 +34,7 @@
 		
 			<section id="newsletter">
 			<div class="container">
-			<form action="searchadmin.php" method="POST">
+			<form action="searchAdmin.php" method="POST">
 				<input  type="text" name="search" placeholder="Search">
 				<button type="submit" name="submit-search" class="button_1">Search</button>
 			</form>
