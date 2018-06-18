@@ -186,6 +186,53 @@
 				
 				
 				
+			</div>	
+		
+					<div id="utilizator">
+				<?php 
+					$current_date = date('Y-m-d H:i:s ', time());
+					$sql="select MAX(b.bid_amount),MAX(b.bid_time),a.auction_id from bids b 
+					join users u on u.user_id=b.bidder_id
+					join auctions a on b.auction_id=a.auction_id
+					where u.username='$username'  AND a.end_date>'$current_date'  group by a.auction_id order by b.bid_time desc  ";
+					$result=mysqli_query($conn,$sql);
+					if(mysqli_num_rows($result)>0)
+					{
+				?>
+						<h1>Ultimele biduri plasate in cadrul licitatiilor in desfasurare</h1>
+						<table>
+							<tr>
+								<th>Nume produs</th>
+								<th>Suma licitata</th>
+								<th>Momentul licitarii</th?
+							</tr>				
+				<?php
+						while($row=mysqli_fetch_array($result))
+						{
+							$auction_id=$row['auction_id'];
+							$sql2="select * from products p join auctions a on a.product_id=p.product_id where a.auction_id='$auction_id'";
+							$res2=mysqli_query($conn,$sql2);
+							$row2=mysqli_fetch_array($res2);
+							$product_name=$row2['product_name'];
+				?>
+						<tr>			
+							<td> <?php echo $product_name; ?> </td>
+							<td><?php echo $row['MAX(b.bid_amount)']; ?> </td>
+							<td><?php echo $row['MAX(b.bid_time)']; ?> </td>
+						</tr>
+				<?php 
+						}
+					}
+				else
+					{	
+				?>
+					<h1>Licitatii in desfasurare</h1>
+				<?php
+					echo "Nu ati licitat pentru nici un produs / Produsele pentru care ati licitat nu mai sunt disponibile";
+					}
+				?>
+						</table>		
 			</div>			
+		
 	</body>
 </html>
