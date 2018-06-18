@@ -8,7 +8,7 @@
 		<meta name="keywords" content="Web design">
 		<meta name="author" content="Alex Zaharia,Sima Paul,Rebegea Bogdan,Iulian Crisnuta">
 		<title>AuctioX | About us</title>
-		<link rel="stylesheet" href="./css/style.css"> 
+		<link rel="stylesheet" href="./css/alex.css"> 
 	</head>
 	<body>
 		<header>
@@ -33,10 +33,10 @@
 		
 		<section id="newsletter">
 			<div class="container">
-				<form action="searchAdmin.php">
-					<input type="search" name="q" placeholder="Search" required>
-					<button type="Submit" class="button_1">Search</button>
-				</form>
+				<form action="searchAdmin.php" method="POST">
+				<input  type="text" name="search" placeholder="Search" required>
+				<button type="submit" name="submit-search" class="button_1">Search</button>
+			</form>
 			
 			</div>
 		</section>
