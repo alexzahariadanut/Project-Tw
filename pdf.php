@@ -22,7 +22,7 @@ if(!mysqli_select_db($con,'auctiox'))
 
 
 
-$sql = "SELECT * FROM auctions join products on auctions.seller_id=products.seller_id ";
+$sql = "Select * from products join auctions on products.product_id=auctions.product_id " ;
 
 
 
