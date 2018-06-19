@@ -23,7 +23,7 @@
 		<header>
 			<div class="container">
 				<div id="branding">
-					<h1><a href="index.php"><span class="highlight">AuctioX</span> Web Page</a></h1>
+					<h1><a href="indexafterlogin.php"><span class="highlight">AuctioX</span> Web Page</a></h1>
 				</div>
 				<nav>
 				<ul>
@@ -68,17 +68,37 @@
 	if(isset($_POST['submit-search']))
 	{
 		$search = mysqli_real_escape_string($conn, $_POST['search']);
-		$sql = "Select * from products join auctions on products.product_id=auctions.product_id where product_name LIKE '%$search%' or product_description like '%$search%'";
+		$sql = "Select * from products join auctions on products.product_id=auctions.product_id where product_name LIKE '%$search%' or product_description like '%$search%' or grad_uzura like '%search%' or
+		end_date like '%$search%'";
 		$result = mysqli_query($conn,$sql);
 		$queryResult = mysqli_num_rows($result);
-		
-		echo "<h1>There are ".$queryResult. " results!</h1>";
-		
-		if($queryResult < 0 )
-			echo "There are no results matching your search!";		
+		if($queryResult <1 )
+			echo "<h1>There are no results matching your search!</h1>";
 	
+		$current_date = date('Y-m-d H:i:s ', time()); // formatul servererului dupa care s-a introdus timestamp in auctions.end_time
+		$cautare=mysqli_query($conn,$sql);
 		
-		
+		while($row=mysqli_fetch_array($cautare))
+				{		
+						$sql_auction="select * from auctions join products on auctions.product_id=products.product_id where products.product_id=".$row['product_id'];
+						$result_sql_auction=mysqli_query($conn,$sql_auction);
+						$row_result_sql_auction=mysqli_fetch_array($result_sql_auction);  // detalii despre licitatia produsului 
+						if($queryResult > 0 )
+								if($current_date < $row_result_sql_auction['end_date'])
+								{	
+									echo "<h1>The results are : </h1>";
+									break;
+									
+								}
+								else 
+								{	
+									echo "<h1>There are no results matching your search!</h1>";
+									break;
+									
+								}
+				
+
+				}
 	}
 				while($row=mysqli_fetch_array($result))
 				{
