@@ -29,10 +29,10 @@
 				<nav>
 				<ul>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="about.php">About us</a></li>
+					<li><a href="about.html">About us</a></li>
 					<li><a href="categories.php">Categories</a></li>
-					<li><a href="login.php">Login</a></li>
-					<li><a href="register.php">Register</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="register.html">Register</a></li>
 					
 				
 				
