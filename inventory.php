@@ -109,7 +109,7 @@
 
 						<label for="c">End date: </label>   
 
-						<input  id="c" type="text" name="end_date" required placeholder="Ex. 2018.06.13 23:59:00 "/>
+						<input  id="c" type="text" name="end_date" required placeholder="Ex. 2018-06-13 23:59:00 "/>
 
 					</p>
 
