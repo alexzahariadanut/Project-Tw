@@ -23,28 +23,22 @@
     die("Connection failed: " . $conn->connect_error);}
 
     // prepare sql and bind parameters for products
-    $stmt = $conn->prepare("INSERT INTO products (product_name, product_description,seller_id, category_id) 
-    VALUES (?,?,?,?);");
-    $stmt->bind_param("ssii", $product_name, $product_description, $seller_id_products, $category_id);
-
-	
-	/*	$stmt->bindParam(':product_name', $product_name);
-    $stmt->bindParam(':product_description', $product_description);
-    $stmt->bindParam(':seller_id', $seller_id_products);
-	$stmt->bindParam('category_id', $category_id);
-	$stmt->bindParam('image', $image);*/
+    $stmt = $conn->prepare("INSERT INTO products (product_name, product_description,seller_id, category_id, grad_uzura) 
+    VALUES (?,?,?,?,?);");
+    $stmt->bind_param("ssiis", $product_name, $product_description, $seller_id_products, $category_id, $condition);
 
     // insert into products
+    $condition = $_POST['condition'];
     $product_name =$_POST['name'];
 	echo "product name :".$product_name."<br>";
     $product_description = $_POST['description'];
 	echo "product desc:".$product_description."<br>";
-	$afisare=$_SESSION['utilizator'];
+    $afisare=$_SESSION['utilizator'];
 	echo "username :".$afisare."<br>";
 	
-	$sql = "SELECT user_id FROM users WHERE username ='$afisare' LIMIT 1"; //extrag user id din sesiune
-	$result = mysqli_query($conn, $sql);
-	$row = mysqli_fetch_assoc($result);
+   $sql = "SELECT user_id FROM users WHERE username ='$afisare' LIMIT 1"; //extrag user id din sesiune
+   $result = mysqli_query($conn, $sql);
+   $row = mysqli_fetch_assoc($result);
 	echo "user_id".$row['user_id']."<br>";
     $seller_id_products= $row['user_id'];
 	
