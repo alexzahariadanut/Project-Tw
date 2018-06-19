@@ -8,6 +8,7 @@
 		<meta name="author" content="Alex Zaharia,Sima Paul,Rebegea Bogdan,Iulian Crisnuta">
 		<title>AuctioX | Categories</title>
 		<link rel="stylesheet" href="./css/style2.css"> 
+		<link rel="stylesheet" href="./css/alex2.css"> 
 	</head>
 	<body>
 		<header>
