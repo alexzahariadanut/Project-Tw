@@ -81,7 +81,7 @@
 
 				
 
-				<form name="addItem" action="addItem.php" method="post">
+				<form action="addItem.php" method="post" enctype="multipart/form-data">
 
 					<h1> Add item </h1>
 
@@ -119,17 +119,17 @@
 
 						<select id="e" name="category" required >
 
-							<option value="mobile phones">Mobile Phones</option>
+							<option value="Mobile Phones">Mobile Phones</option>
 
-							<option value="cars">Cars</option>
+							<option value="Cars">Cars</option>
 
-							<option value="houses">Houses</option>
+							<option value="Houses">Houses</option>
 
-							<option value="tv">TV</option>
+							<option value="TV">TV</option>
 
 							<option value="PC">PC</option>
 
-							<option value="clothes">Clothes</option>
+							<option value="Clothes">Clothes</option>
 
 						</select>
 
@@ -147,7 +147,7 @@
 
 						<label for="g"> Pictures: </label>
 
-						<input id="g" type="file" accept="image/*" multiple name="image" required />
+						<input id="g" type="file" accept="image/*"  name="image" />
 
 					</p>
 
