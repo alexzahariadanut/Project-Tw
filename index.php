@@ -99,7 +99,7 @@
 			</div>
 			</a>
 			
-			<a href="account.html">	
+			<a href="register.html">	
 			<div class="post">
 			<img src="./img/doi.jpg" alt="">
 			<div class="post-s">
