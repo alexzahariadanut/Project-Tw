@@ -83,7 +83,7 @@
 			
 			</div>
 		</section>
-		   <a href="about.html" >
+		   <a href="aboutadmin.php" >
 			<div class="post">
 			<img src="./img/prima.jpg" alt="">
 			<div class="post-s">
@@ -93,7 +93,7 @@
 			</div>
 			</a>
 			
-			<a href="account.html">	
+			<a href="accountadmin.php">	
 			<div class="post">
 			<img src="./img/doi.jpg" alt="">
 			<div class="post-s">
